@@ -1,0 +1,7 @@
+appconfig
+
+bin
+
+.idea
+
+/cmd/api/config/local
