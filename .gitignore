@@ -1,7 +1,6 @@
-appconfig
+.env*
+
+!.env.template
 
 bin
-
 .idea
-
-/cmd/api/config/local
