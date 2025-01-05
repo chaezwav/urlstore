@@ -3,8 +3,8 @@
 CREATE TABLE IF NOT EXISTS links
 (
     id             TEXT    PRIMARY KEY,
-    alias          TEXT,
-    url            TEXT    NOT NULL,
+    alias          TEXT    UNIQUE,
+    url            TEXT    NOT NULL UNIQUE ,
     flags          TEXT[],
     created_at     DATE    NOT NULL
 );

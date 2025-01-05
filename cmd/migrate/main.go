@@ -35,7 +35,7 @@ func main() {
 	godotenv.Load()
 	c := config.LoadDatabaseConfig()
 
-	dbString := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", c.Host, c.Port, c.User.Username, c.User.Password, c.DBName)
+	dbString := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", c.Host, c.Port, c.User.Name, c.User.Password, c.Name)
 
 	db, err := goose.OpenDBWithDriver("pgx", dbString)
 
@@ -63,8 +63,7 @@ func usage() {
 var (
 	usagePrefix = `Usage: migrate command
 Examples:
-    migrate status
-`
+    migrate status`
 
 	usageCommands = `
 Commands:

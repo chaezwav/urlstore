@@ -21,15 +21,15 @@ type ServerConfig struct {
 }
 
 type DatabaseUser struct {
-	Username string `env:"DB_USER,required"`
+	Name     string `env:"DB_USER,required"`
 	Password string `env:"DB_PASS,required"`
 }
 
 type DatabaseConfig struct {
-	Host   string `env:"DB_HOST,required"`
-	Port   int    `env:"DB_PORT,required"`
-	User   DatabaseUser
-	DBName string `env:"DB_NAME,required"`
+	Host string `env:"DB_HOST,required"`
+	Port int    `env:"DB_PORT,required"`
+	User DatabaseUser
+	Name string `env:"DB_NAME,required"`
 }
 
 func LoadConfig() *Config {
